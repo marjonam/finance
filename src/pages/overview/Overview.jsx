@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCollectionsData } from "../../hooks/useCollectionData";
 import { useLogout } from "../../hooks/useLogout";
-import "./overview.scss";
+import "./Overview.scss";
 import PieChart from "../../components/PieChart";
 
 function Overview() {
