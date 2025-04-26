@@ -321,15 +321,76 @@
   color: #333333;
 }
 
-@media (max-width: 1020px) {
-  .overview-top {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+/* Normal - Desktop */
+.overview-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
 }
 
+.sidebar {
+  width: 250px;
+  background: #111;
+  height: 100vh;
+  padding: 24px;
+}
+
+/* Tablet va Mobile uchun Sidebarni berkitamiz */
 @media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+.bottom-nav {
+  display: none; /* Desktopda ko'rinmaydi */
+}
+
+/* 768px dan kichik ekranlar uchun ko'rsatamiz */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    z-index: 999;
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #777777;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .bottom-nav-item svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+}
+/* Mobile - 480px dan past */
+@media (max-width: 480px) {
   .overview-top {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .overview-bottom {
+    flex-direction: column;
+  }
+
+  .overview-budgets,
+  .overview-recurring {
+    width: 100%;
+    height: auto;
   }
 }
 
