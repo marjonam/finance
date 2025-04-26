@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useCollectionsData } from "../../hooks/useCollectionData";
 import { useLogout } from "../../hooks/useLogout";
 import "./Overview.scss";
-import PieChart from "../../components/PieChart";
+import Chart from "../../components/Chart.jsx";
 
 function Overview() {
   const { signout, isPending } = useLogout();
@@ -134,12 +134,7 @@ function Overview() {
               </Link>
             </div>
             <div className="overview-budgets_bottom">
-              <div className="overview-budgets-chart">
-                <img
-                  src="../images/Chart.png"
-                  alt="Keyingi vazifaga to'g'irlab qo'yaman"
-                />
-              </div>
+              <div className="">{data && <Chart budgets={data.budgets} />}</div>
               <ul className="overview-budgets-list">
                 {data &&
                   data.budgets.map((item) => {

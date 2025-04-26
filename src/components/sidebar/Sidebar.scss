@@ -1,8 +1,9 @@
 .sidebar {
   background-color: #1e1e23;
   color: white;
-  width: 240px;
+  width: 300px;
   height: 100vh;
+  transition: 0.3s;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 1rem;
@@ -71,4 +72,8 @@
     filter: brightness(0) saturate(100%) invert(24%) sepia(97%) saturate(750%)
       hue-rotate(118deg) brightness(89%) contrast(85%);
   }
+}
+
+.sidebar.toggle-bar {
+  width: 88px;
 }

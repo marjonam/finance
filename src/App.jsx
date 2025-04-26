@@ -20,14 +20,12 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/config";
-
 import { useDispatch } from "react-redux";
 import { isAuthReady, login } from "./app/features/userSlice";
 
 function App() {
   const { user, isAuth } = useSelector((s) => s.user);
   const dispatch = useDispatch();
-
   const routes = createBrowserRouter([
     {
       path: "/",
