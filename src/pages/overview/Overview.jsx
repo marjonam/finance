@@ -3,6 +3,7 @@ import { useCollectionsData } from "../../hooks/useCollectionData";
 import { useLogout } from "../../hooks/useLogout";
 import "./Overview.scss";
 import Chart from "../../components/Chart.jsx";
+import RecurringBillsSummary from "../../components/RecurringBillsSummary.jsx";
 
 function Overview() {
   const { signout, isPending } = useLogout();
@@ -167,33 +168,11 @@ function Overview() {
               </Link>
             </div>
             <ul className="overview-recurring__list">
-              <li
-                className="overview-recurring__list-item"
-                style={{
-                  borderColor: "#277C78",
-                }}
-              >
-                <span>Paid Bills</span>
-                <h5>$190.00</h5>
-              </li>
-              <li
-                className="overview-recurring__list-item"
-                style={{
-                  borderColor: "#F2CDAC",
-                }}
-              >
-                <span>Total Upcoming</span>
-                <h5>$194.98</h5>
-              </li>
-              <li
-                className="overview-recurring__list-item"
-                style={{
-                  borderColor: "#82C9D7",
-                }}
-              >
-                <span>Due Soon</span>
-                <h5>$59.98</h5>
-              </li>
+              {data && (
+                <RecurringBillsSummary
+                  transactions={data.transactions.slice(0, 5)}
+                />
+              )}
             </ul>
           </div>
         </div>

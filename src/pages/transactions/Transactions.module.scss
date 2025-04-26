@@ -1,0 +1,107 @@
+.transactionsPage {
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid $grey-300;
+}
+
+.filters select {
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 15px;
+  border: 1px solid $grey-300;
+}
+
+.transactionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transactionItem {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.right {
+  text-align: right;
+}
+
+.amount {
+  font-weight: bold;
+}
+
+.income {
+  color: #277c78;
+}
+
+.expense {
+  color: black;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prevNextBtn {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid $grey-300;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.prevNextBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 8px;
+}
+
+.pageBtn {
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid $grey-300;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.activePage {
+  background-color: black;
+  color: white;
+}

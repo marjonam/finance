@@ -58,3 +58,37 @@ main {
   flex-grow: 1;
   overflow-y: auto;
 }
+
+.apexcharts-legend {
+  display: none !important;
+}
+
+.recurring-bills {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recurring-bills h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bill-category {
+  margin-bottom: 15px;
+}
+
+.bill-category h3 {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.bill-category .amount {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}

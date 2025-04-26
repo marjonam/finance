@@ -51,7 +51,7 @@ function Chart({ budgets }) {
 
   return (
     <div>
-      <div style={{ width: "300px" }} id="chart">
+      <div style={{ width: "350px" }} id="chart">
         <ReactApexChart
           options={state.options}
           series={state.series}
