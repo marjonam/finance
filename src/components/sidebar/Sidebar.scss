@@ -77,3 +77,11 @@
 .sidebar.toggle-bar {
   width: 88px;
 }
+
+.sidebar__minimize {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px;
+}

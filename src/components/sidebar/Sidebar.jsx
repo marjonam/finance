@@ -98,7 +98,7 @@ const Sidebar = ({ showNavbar, setShowNavbar }) => {
           alt="Minimize Menu"
           className="sidebar__icon"
         />
-        <span>Minimize Menu</span>
+        {!showNavbar && <span>Minimize Menu</span>}
       </div>
     </div>
   );
